@@ -1,0 +1,566 @@
+* {margin: 0; padding: 0; }
+
+
+body {font-family: Arial, Helvetica, Sans-serif; }
+header {display: block;  background-color: #000000; padding: 20px; border-bottom: 5px solid #000000;}
+h1 {font-weight: normal; padding: 1.5em; color: rgb(238, 219, 6); text-shadow: 1px 1px 0px #161616; width: 1000px; margin: auto;}
+
+nav {background-color: #443A5C;}
+   /* New right-side navbar */
+
+ nav.usericon {position: right;} 
+
+ .right-navbar {
+    float: right;
+}
+
+.right-navbar a {
+    float: none;
+    display: inline-block;
+} 
+
+nav {background-color: rgb(238, 219, 6);}
+nav a {color: rgb(8, 8, 8); text-decoration: none;}
+nav a:hover {color: #46322c9d;}
+nav ul {display: table; width: 1200px; margin: auto;}
+nav li {display: table-cell; text-align: center; padding: 1em;}
+
+main {overflow: auto; min-height: 40vh; background-color: white; width: 1000px; margin: auto; padding-top: 20px; min-height: 600px;}
+
+footer {padding: 1em; background-color: rgb(238, 219, 6) ; font-size: 0.8em;}
+
+p {margin-bottom: 1em;}
+
+body {font-size: 1.2em; font-family: arial, helvetica, sans-serif}
+input, label, select, textarea {float: left; width: 15em; margin-bottom: 1em;  padding: 0.5em;}
+label {clear: left; padding: 0; margin: 0;}
+input[type="submit"] {margin-left: 15em; width: auto; padding: 0.5em 1em; clear: both; font-size: 1em;}
+form {overflow: auto; clear: both; display: block;}
+
+blockquote {display: table; margin-bottom: 1em; border-bottom: 1px solid #ccc; padding: 0.5em; }
+blockquote p {display: table-cell; width: 70%; vertical-align: top;}
+blockquote form {  display: table-cell; width: 10%;}
+
+.errors {padding: 1em; border: 1px solid red; background-color: rgb(32, 32, 13); color: red; margin-bottom: 1em; overflow: auto;}
+.errors ul {margin-left: 1em;}
+
+form p {clear: both;}
+input[type="checkbox"] {float: left; clear: left; width: auto; margin-right: 10px;}
+input[type="checkbox"] + label {clear: right;}
+
+.jokelist {display: table;}
+.categories {display: table-cell; width: 20%; background-color: #333; padding: 1em; list-style-type: none;}
+.categories a {color: white; text-decoration: none;}
+.categories li {margin-bottom: 1em;}
+.jokelist .jokes {display: table-cell; padding: 1em;}
+
+.currentpage:before { content: "["; }
+.currentpage:after { content: "]"; }
+
+.post-entry {
+    background: rgb(238, 219, 6);
+    color: black;
+    margin-bottom: 20px;
+}
+
+a.goto-post:link { 
+    text-decoration: none; 
+} 
+
+a.goto-post:visited { 
+    text-decoration: none; 
+} 
+
+a.goto-post:hover { 
+    text-decoration: none; 
+} 
+
+a.goto-post:active { 
+    text-decoration: none; 
+}
+
+.post-title {
+    background: black;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 15px;
+}
+
+.postview .post-title, .postview .post-text, .postview .post-footer {
+    text-align: left;
+
+}
+
+.post-title p {
+    display: inline-block;
+    max-width: 85%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.post-title p a {
+    color: white;
+}
+
+.post-entry p {
+    margin-bottom: 0;
+}
+
+.post-text {
+    font-style: italic;
+    padding: 15px;
+}
+
+.post-text p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;	
+    -webkit-box-orient: vertical;
+}
+
+.post-text p a {
+    color: black;
+}
+
+.postview .post-text p {
+    overflow: auto;
+    overflow-wrap: break-word;
+    display: block;
+    -webkit-line-clamp: initial;
+    -webkit-box-orient: initial;
+}
+
+.post-footer {
+    background: #999;
+    padding: 3px 15px;
+    font-size: 0.8em;
+    font-weight: bold;
+    font-style: italic;
+    color: #efefef;
+}
+
+.post-button {
+    cursor: pointer;
+    background:rgb(238, 219, 6);
+    color: black;
+    float: right;
+    font-size: 0.7em;
+    padding: 5px 10px;
+}
+
+.post-button:not(:first-of-type) {
+    margin-right: 10px;
+}
+.post-author {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    font-weight: bold;
+    color: #333;
+    background: white;
+    border-top:solid 1px black;
+    font-size: 0.9em;
+    vertical-align: baseline;
+}
+
+.postview .post-author {
+    font-size: 1.2em;
+    padding: 10px 20px;
+}
+
+.post-author span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.post-create-date {
+    margin-left: auto;
+    color: #777;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.post-author-image {
+    display: inline-block;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.postview .post-author-image {
+    height: 50px;
+}
+
+.post-author-image img {
+    height: 25px;
+    width: auto;
+}
+
+.postview .post-author-image img {
+    height: 50px;
+}
+
+.postview .post-entry {
+    text-align: center;
+}
+
+.postview .post-image {
+    display: inline-block;
+    /* width: 20%;
+    max-width: 300px;
+    height: auto; */
+}
+
+.postview .post-image img {
+    width: auto;
+    max-height: 300px;
+    transition: all .3s linear;
+}
+
+.postview .post-image a:hover img {
+    filter: sepia(100%) saturate(300%) brightness(70%);
+}
+
+.active-link {
+    background: black;
+}
+
+.active-link a {
+    color:rgb(238, 219, 6);
+}
+	
+.active-link a:hover {
+    color:white;
+}
+
+.page-title {
+    margin-bottom: 20px;
+}
+
+.error-text {
+    margin-bottom: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    background: rgb(238, 219, 6);
+    color: black;;
+}
+
+input:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.center-form {
+    text-align: center;
+}
+
+.center-form form {
+    display: inline-block;
+    width: 60%;
+}
+
+.center-form form label {
+    text-align: left;
+    display: block;
+    float: none;
+}
+
+.center-form form input, .center-form form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.center-form form input[type="submit"] {
+    margin-left: auto;
+    width: auto;
+}
+
+input, textarea, select, button {
+    border: 2px solid black;
+}
+
+input[readonly] {
+    background: #ddd;
+    cursor: not-allowed;
+}
+
+.grey-navbar {
+    background: lightgrey;
+}
+
+.admin-area {
+    display: grid;
+    grid-template-columns: 2.3fr 1.2fr 1fr;
+    column-gap: 10px;
+}
+
+.admin-area .section {
+    font-size: 0.8em;
+}
+
+.admin-area .modules-section {
+    font-size: 0.75em;
+}
+
+.admin-area .modules-section .post-title {
+    padding: 5px 10px;
+}
+
+.admin-area .modules-section .post-text {
+    padding: 10px 10px;
+}
+
+.admin-area .modules-section .post-title p {
+    max-width: 75%;
+}
+
+.admin-area .users-section {
+    font-size: 1em;
+}
+
+.admin-area .section .page-title {
+    font-size: 24px;
+}
+
+.admin-area .users-section .post-author {
+    padding: 5px 0 0 0;
+    display: block;
+}
+
+/* .admin-area .section .post-title p {
+    max-width: 75%;
+} */
+
+.large-main {
+    width: 1200px;
+}
+
+.disabled-button {
+    background: #ddd;
+    cursor: not-allowed;
+}
+
+.search-area .search-bar {
+    font-size: 0.9em;
+}
+
+.search-area button {
+    border: none;
+    cursor: pointer;
+}
+
+.search-area button img {
+    max-width: 40px;
+}
+
+.post-comment {
+    background: rgba(238, 219, 6, 0.7);
+    width: 80%;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+.post-comment:last-child {
+    margin-bottom: 40px;
+}
+
+.post-comment .comment-title {
+    background: black;
+    color: white;
+    padding: 10px 15px;
+}
+
+.post-comment .comment-text {
+    padding: 10px 15px;
+}
+
+.post-comment .comment-text p {
+    margin-bottom: 10px;
+}
+
+.post-comment .comment-text {
+    word-wrap: break-word;
+    overflow-y: auto;
+    height: auto;
+    max-height: 300px;
+}
+
+.post-comment .comment-title .post-author-image,
+.post-comment .comment-title .post-author-image img {
+    height: 30px;
+}
+
+.post-comment .comment-date {
+    font-style: italic;
+    font-size: 0.9em;   
+}
+
+.new-comment {
+    margin-left: auto;
+    width: 80%;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.new-comment form {
+    display: inline-block;
+}
+
+.new-comment .posting-as {
+    margin-left: auto;
+    margin-right: 20px;
+    font-style: italic;
+}
+
+button {
+    border-radius: 5px !important;
+}
+
+.new-comment .reply-button {
+    padding: 10px 40px;
+    background: rgb(238, 219, 6);
+    color: black;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+textarea {
+    font-family: inherit;
+}
+
+.comment-text {
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    height: 200px;
+    font-size: 1em;
+    text-align: left;
+}
+
+.reply-button-section {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comment-form {
+    text-align: right;
+}
+
+.button-grey {
+    background: rgb(230, 10, 10);
+    color: white;
+}
+
+.cookie-section {
+    width: 100vw;
+    /* height: 20vh; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background:rgb(238, 219, 6);
+    background-image: url('INCLUDES/morpheus.png');
+    background-repeat: no-repeat;
+    background-position-x: 125%;
+    background-size: 38%;
+    padding: 20px;
+    border-top: 2px solid black;
+}
+
+.cookie-description {
+    max-width: 90%;
+}
+
+.cookie-title {
+    display: inline-block;
+}
+
+.cookie-section button {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.aligned-title {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.cookie-section .accept-blue-pill {
+    background: #003b6f;
+}
+
+.cookie-section .accept-blue-pill:after {
+    /* background: url('INCLUDES/bluepill.png'); */
+    background-image: url('INCLUDES/bluepill.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 620px;
+    top: -15px;
+    content: "";
+    opacity: 0;
+    transition: .3s cubic-bezier(1, 0, 0, 1);
+}
+
+.cookie-section .accept-red-pill {
+    background: #F00004;
+}
+
+.cookie-section .accept-red-pill:after {
+    background-image: url('INCLUDES/redpill.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(-45deg);
+    left: 640px;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    content: "";
+    opacity: 0;
+    transition: .3s cubic-bezier(1, 0, 0, 1);
+}
+
+.cookie-section .accept-blue-pill:hover:after,
+.cookie-section .accept-red-pill:hover:after {
+    opacity: 1;
+}
+
+.cookie-section .cookie-image {
+    width: 60px;
+    margin-right: 10px;
+}
+
+button, input[type="submit"] {
+    cursor: pointer;
+}
+
+button, span, img {
+    background: transparent;
+}
+
+.comment-icon {
+    float: left;
+}
+
+.comment-icon img {
+    width: 80px;
+    margin-top: -15px;
+}
